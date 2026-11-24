@@ -1,4 +1,14 @@
 # BandScoreSplit  
+
+> [!IMPORTANT]
+> **本工具已停止維護，請改用 [audiveris-bandscore](https://github.com/hibikiwtnb/audiveris-bandscore) 的 `skill/tools/extract_parts.py`。**
+>
+> 新工具用 Audiveris 讀出的版面直接從原始掃描裁出各聲部分譜，不辨識音符，因此 OMR 的音符錯誤不會進入分譜。它會自動找出每個樂器在每行譜表的位置，一次替每個樂器輸出一份 A4 PDF，不必再手動逐段拉裁剪框、逐頁拼接圖檔；聲部名稱取自樂譜結構而不是 OCR；可選加上和弦符號或主唱歌詞。用法見 [skill/README.md 的「圖片式分譜」](https://github.com/hibikiwtnb/audiveris-bandscore/blob/bandscore/skill/README.md#圖片式分譜)。執行前需先依 [skill/SKILL.md](https://github.com/hibikiwtnb/audiveris-bandscore/blob/bandscore/skill/SKILL.md) 用 Audiveris 跑過該曲。
+>
+> **本ツールはメンテナンスを終了しました。[audiveris-bandscore](https://github.com/hibikiwtnb/audiveris-bandscore) の `skill/tools/extract_parts.py` をご利用ください。** Audiveris が読み取ったレイアウトを使って元のスキャン画像から各パートを自動で切り出し、楽器ごとに A4 PDF を出力します。音符は認識しないため OMR の誤認識がパート譜に入らず、トリミング枠の手動調整やページの貼り合わせも不要です。コード記号やボーカル譜の追加も選べます。使い方は [skill/README.md](https://github.com/hibikiwtnb/audiveris-bandscore/blob/bandscore/skill/README.md#圖片式分譜) を参照してください（事前に [skill/SKILL.md](https://github.com/hibikiwtnb/audiveris-bandscore/blob/bandscore/skill/SKILL.md) に従って Audiveris で処理しておく必要があります）。
+>
+> **This tool is no longer maintained.** Use `skill/tools/extract_parts.py` in [audiveris-bandscore](https://github.com/hibikiwtnb/audiveris-bandscore) instead: it reads the Audiveris layout and automatically cuts one A4 PDF per instrument from the original scan, without recognizing notes, so OMR note errors cannot reach the parts. It needs no manual trim boxes or page assembly, takes part names from the score structure rather than OCR, and can optionally add chord symbols or the vocal staff. See the [image parts section of skill/README.md](https://github.com/hibikiwtnb/audiveris-bandscore/blob/bandscore/skill/README.md#圖片式分譜) for usage; the score must first be processed through Audiveris as described in [skill/SKILL.md](https://github.com/hibikiwtnb/audiveris-bandscore/blob/bandscore/skill/SKILL.md).
+
 BandScoreSplit is a tool for dividing band scores(Or orchestra score, etc.) into parts scores. that is built with HTML5 Canvas. only use for image(JPG,PNG) or PDF files. Files will not be sent to the server, all processing is completed locally. (OCR function needs to go through HTTP server, or use the Online demo)  
 
 BandScoreSplitは画像形式のバンドスコア(またはオーケストラスコアなど)をパート譜に抽出するためのツールです。HTML5のCanvasを使用して構築したものです。処理できるのは画像（JPG,PNG）とPDF。処理するファイルはサーバーに転送されることはありません、全部処理はローカルで完結します。(OCR機能を使用するにはHTTPサーバ経由か、下方のOnline demoのリンクから使用してください)  
